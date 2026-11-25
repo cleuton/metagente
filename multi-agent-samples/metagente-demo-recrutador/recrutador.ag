@@ -8,6 +8,6 @@ agent Recrutador
       fail "I need the resumes folder name"
     if not job
       fail "I need the job description"
-    candidates = Leitor.summarize folder: folder within 240 seconds
-    ranking = Avaliador.rank job: job candidates: candidates within 180 seconds
+    candidates = Leitor.summarize folder: folder within 600 seconds
+    ranking = Avaliador.rank job: job candidates: candidates within 400 seconds
     reply "The best 3 candidates for the job:\n{ranking}"

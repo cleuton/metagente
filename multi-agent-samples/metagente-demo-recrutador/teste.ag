@@ -1,0 +1,5 @@
+agent Assistente
+  goal "Responder perguntas de forma curta."
+  accepts ask question
+  on ask
+    reply think "Responda em português, em no máximo duas frases: {question}"

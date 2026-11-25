@@ -1,5 +1,7 @@
 # Metagente
 
+🇧🇷 [Leia em Português](README.pt-BR.md)
+
 **Build AI agents in a few lines, not a few hundred.**
 
 Metagente is a small language for building AI agents. You describe what the agent is for, which tools it may
@@ -108,6 +110,10 @@ non-programmers a way to build agents, Metagente is for you.
 - **Python interoperability** (new in 0.1.3): tested against the official A2A Python SDK, in both directions.
 - **Several language models** (new in 0.1.5): `think "..." using fast` chooses which model answers; the models are `[llm.NAME]` sub-tables of `[llm]` in `metagente.toml`, Anthropic or OpenAI at their official addresses, with the model name and the key taken from environment variables.
 - **Minimum version and bearer tokens** (new in 0.1.4): `[version]` makes an older Metagente refuse a project; `[auth]` protects messages with a token that a program of yours validates, and passes the token on to the agents and tools you list.
+
+## You can use local models!
+
+Yes! You can use local models with **OLLAMA**. Check [**this demo!**](./multi-agent-samples/city-briefing-ollama/).
 
 ### New in 0.1.5: several language models for `think`
 

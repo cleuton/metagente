@@ -1,0 +1,11 @@
+agent Researcher
+  goal "Find facts about a city and summarize them"
+  tool http
+  tool clock
+  accepts research city  # find facts about a city
+  on research
+    if not city
+      fail "I need a city"
+    now = clock.now
+    facts = think "Use the http tool to GET https://en.wikipedia.org/api/rest_v1/page/summary/{city} and write three short sentences about {city}, using the extract field of the JSON."
+    reply "{facts}\n(checked {now.text})"
